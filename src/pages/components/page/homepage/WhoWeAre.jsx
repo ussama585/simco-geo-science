@@ -41,7 +41,7 @@ export default function WhoWeAreSection() {
             <h2>Our Services</h2>
           </div>
         </div>
-        <div className="col-12 col-md-8 ps-2 ps-md-0">
+        <div className="col-12 col-md-8 ps-2 ps-md-0 d-none d-md-block">
           <div className={styles.rightPanel}>
             <Image
               src={bgImage}
