@@ -5,24 +5,19 @@
   width: 100%;
   z-index: 1000;
   background: #00000014;
+  backdrop-filter: blur(8px);
+
+  @media screen and (max-width:768px) {
+    background: rgba(10, 18, 40, 0.96);
+  }
 
   .inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 40px;
-  }
-
-  .nav {
-    display: flex;
-    gap: 28px;
-
-    a {
-      color: #fff;
-      font-size: 16px;
-      font-weight: 500;
-      text-decoration: none;
-    }
+    padding: 40px;
+    gap: 20px;
+    position: relative;
   }
 
   .logo,
@@ -30,5 +25,140 @@
     color: #fff;
     font-size: 18px;
     font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    a {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .menuButton {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+
+  .mobileMenuOpen {
+    display: none;
+  }
+
+  @media (max-width: 1199px) {
+    .inner {
+      padding: 28px 24px;
+    }
+
+    .nav {
+      gap: 20px;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    .logo,
+    .logoRight {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .inner {
+      padding: 20px 16px;
+    }
+
+    .nav {
+      display: none;
+    }
+
+    .logoRight {
+      display: none;
+    }
+
+    .menuButton {
+      display: flex;
+    }
+
+    .mobileMenu {
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      right: 0px;
+      background: rgba(10, 18, 40, 0.96);
+      border-radius: 0 0 12px 12px;
+      padding: 14px 16px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+
+      a {
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .mobileMenuOpen {
+      display: block;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .inner {
+      padding: 16px;
+    }
+
+    .logo {
+      font-size: 15px;
+      max-width: calc(100% - 56px);
+      white-space: normal;
+    }
+
+    .mobileMenu {
+      left: 12px;
+      right: 12px;
+      padding: 12px 14px;
+    }
   }
 }
