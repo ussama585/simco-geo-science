@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/Header.module.scss";
-import logo1 from "@/assets/images/header/logo1.svg";
-import logo2 from "@/assets/images/header/logo2.svg";
+import logo1 from "@/assets/images/header/logo1.webp";
+import logo2 from "@/assets/images/header/logo2.webp";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <div className={styles.logo}>
-          <img src={logo1.src} alt="Simcoe Geoscience Logo Part 1" width={120} className={styles.logoPart1} />
+          <img src={logo1.src} alt="Simcoe Geoscience Logo Part 1" width={100} className={styles.logoPart1} />
         </div>
 
         <nav className={styles.nav}>

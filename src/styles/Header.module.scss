@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: #00000014;
+  background: #5959595c;
   backdrop-filter: blur(8px);
 
   @media screen and (max-width:768px) {
@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px;
+    padding: 10px 40px;
     gap: 20px;
     position: relative;
   }
