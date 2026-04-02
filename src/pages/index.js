@@ -4,6 +4,8 @@ import Hero from "./components/page/homepage/Hero";
 import WhoWeAreSection from "./components/page/homepage/WhoWeAre";
 import ServicesHighlightSection from "./components/page/homepage/ServicesHighlightSection";
 import AboutSection from "./components/page/homepage/AboutSection";
+import EventsGallery from "./components/page/homepage/EventsGallery";
+import FormSection from "./components/page/homepage/FormSection";
 
 
 
@@ -24,6 +26,8 @@ export default function Home() {
       <WhoWeAreSection />
       <ServicesHighlightSection />
       <AboutSection />
+      <EventsGallery />
+      <FormSection />
     </>
   );
 }
