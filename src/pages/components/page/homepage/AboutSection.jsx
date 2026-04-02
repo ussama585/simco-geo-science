@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "@/styles/homepage/Hero.module.scss";
 
-import directorImage from "@/assets/images/homepage/user.jpg";
+import directorImage from "@/assets/images/homepage/user.webp";
+import quoteIcon from "@/assets/images/homepage/quote.svg";
 
 const stats = [
   {
@@ -93,7 +94,7 @@ export default function AboutSection() {
 
               <div className={styles.messageCard}>
                 {/* <div className={styles.quoteMark}>”</div> */}
-
+                <img className={styles.quoteIcon} src={quoteIcon.src} alt="quoteIcon" width={60} height={60} />
                 <p>
                   At Simcoe Geoscience, our focus has always been clear - deliver
                   reliable geophysical data that enables confident decision-making.

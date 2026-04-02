@@ -16,7 +16,7 @@ export default function Hero() {
 
       if (element) {
         new bootstrap.Carousel(element, {
-          interval: 3500,
+          interval: 5000,
           ride: "carousel",
           pause: false,
           wrap: true,

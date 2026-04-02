@@ -1,14 +1,18 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/Header.module.scss";
+import logo1 from "@/assets/images/header/logo1.svg";
+import logo2 from "@/assets/images/header/logo2.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  console.log(logo1,"logo1logo1")
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <div className={styles.logo}>SIMCOE GEOSCIENCE</div>
+        <div className={styles.logo}>
+          <img src={logo1.src} alt="Simcoe Geoscience Logo Part 1" width={120} className={styles.logoPart1} />
+        </div>
 
         <nav className={styles.nav}>
           <Link href="/">Company</Link>
@@ -32,7 +36,9 @@ export default function Header() {
           <span></span>
         </button>
 
-        <div className={styles.logoRight}>SIMCOE GEOSCIENCE ARABIA</div>
+        <div className={styles.logoRight}>
+          <img src={logo2.src} alt="Simcoe Geoscience Logo Part 2" width={140} className={styles.logoPart2} />
+        </div>
       </div>
 
       <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ""}`}>
