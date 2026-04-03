@@ -888,12 +888,15 @@
 
   span {
     font-weight: 700;
+    display: inline-block;
+    position: relative;
+    display: inline-block;
 
     &::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: -8px;
       width: 104px;
       height: 2px;
       background: #1c164b;
