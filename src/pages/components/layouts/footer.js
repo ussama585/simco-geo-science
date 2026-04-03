@@ -130,6 +130,14 @@ export default function Footer() {
                       </span>
                     </li>
                     <li>
+                      <span className="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#31a7bb" class="bi bi-mailbox2-flag" viewBox="0 0 16 16">
+                          <path d="M10.5 8.5V3.707l.854-.853A.5.5 0 0 0 11.5 2.5v-2A.5.5 0 0 0 11 0H9.5a.5.5 0 0 0-.5.5v8z" />
+                          <path d="M4 3h4v1H6.646A4 4 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3V3a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4m.585 4.157C4.836 7.264 5 7.334 5 7a1 1 0 0 0-2 0c0 .334.164.264.415.157C3.58 7.087 3.782 7 4 7s.42.086.585.157" />
+                        </svg> <strong className="ms-2">Postal Code:</strong> 13521
+                      </span>
+                    </li>
+                    <li>
                       <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#31a7bb" class="bi bi-telephone-fill" viewBox="0 0 16 16">
                           <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1。03-.037-2。137.703-2。877z" />
