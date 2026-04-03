@@ -10,7 +10,7 @@ const openSans = Open_Sans({
 export default function Layout({ children }) {
   return (
     <>
-      <Header />
+      <Header className={openSans.className} />
       <main className={openSans.className}>{children}</main>
       <Footer />
     </>
