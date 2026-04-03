@@ -78,17 +78,19 @@ export default function FormSection() {
 
   return (
     <section className={styles.contactSection}>
-      <div className={styles.contactContainer}>
-        <div className={styles.contactHeader}>
-          {/* <span className={styles.contactTag}>Contact us</span> */}
-          <h2 className={styles.contactTitle}>GET IN TOUCH</h2>
-          <p className={styles.contactDescription}>
-            To learn more about capabilities and pricing for Simcoe’s Next
-            Generation Geophysics, please complete the form below:
-          </p>
-        </div>
+      <div className={styles.contactHeader}>
+        {/* <span className={styles.contactTag}>Contact us</span> */}
 
+        <h2 className={styles.contactTitle}>Get In <strong>Touch</strong></h2>
+
+      </div>
+      <p className={styles.contactDescription}>
+        To learn more about capabilities and pricing for Simcoe’s Next
+        Generation Geophysics, please complete the form below:
+      </p>
+      <div className={styles.contactContainer}>
         <form onSubmit={formik.handleSubmit} className={styles.contactForm}>
+
           <div className={styles.formGrid}>
             <div className={styles.formGroup}>
               <label htmlFor="firstName">

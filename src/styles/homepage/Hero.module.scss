@@ -261,8 +261,6 @@
     .topLabel,
     .bottomLabel {
       h2 {
-        font-size: 24px;
-
         &::after {
           width: 110px;
         }
@@ -597,6 +595,10 @@
         height: 3px;
         background: #1c164b;
       }
+
+      @media screen and (max-width: 768px) {
+        font-size: 26px;
+      }
     }
   }
 
@@ -721,7 +723,7 @@
 
 .pressReleaseSection {
   padding: 60px 60px;
-  background: #f3f3f3;
+  background: #ffffff;
 }
 
 .pressReleaseHeader {
@@ -732,7 +734,7 @@
     display: inline-block;
     margin: 0;
     padding-bottom: 10px;
-    font-size: 23px;
+    font-size: 37px;
     line-height: 1.1;
     font-weight: 400;
     color: #1c164b;
@@ -831,7 +833,7 @@
     margin-bottom: 22px;
 
     h2 {
-      font-size: 20px;
+      font-size: 26px;
 
       &::after {
         width: 112px;
@@ -870,7 +872,7 @@
 // events section
 
 .eventsSection {
-  padding: 60px 20px;
+  padding: 60px 60px;
   background: #f3f3f3;
 }
 
@@ -880,29 +882,30 @@
 }
 
 .sectionTitle {
+  position: relative;
   font-size: 37px;
   line-height: 1.2;
   font-weight: 400;
   margin: 0 0 32px;
   color: #1c164b;
 
-  span {
-    font-weight: 700;
-    display: inline-block;
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 104px;
-      height: 3px;
-      background: #1c164b;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 104px;
+    height: 3px;
+    background: #1c164b;
   }
 
+  span {
+    font-weight: 700;
+  }
+
+  @media screen and (max-width:768px) {
+    font-size: 26px;
+  }
 }
 
 .eventsGrid {
@@ -973,10 +976,10 @@
 }
 
 @media (max-width: 991px) {
-  .sectionTitle {
-    font-size: 30px;
-    margin-bottom: 24px;
-  }
+  // .sectionTitle {
+  //   font-size: 30px;
+  //   margin-bottom: 24px;
+  // }
 
   .eventsGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -988,13 +991,9 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 991px) {
   .eventsSection {
-    padding: 40px 16px;
-  }
-
-  .sectionTitle {
-    font-size: 24px;
+    padding: 24px 24px;
   }
 
   .eventsGrid {
@@ -1019,7 +1018,7 @@
 // form section
 
 .contactSection {
-  padding: 80px 0;
+  padding: 80px 60px;
   background: #ffffff;
 
   .contactContainer {
@@ -1030,7 +1029,6 @@
   }
 
   .contactHeader {
-    text-align: center;
     margin-bottom: 28px;
 
     .contactTag {
@@ -1045,12 +1043,11 @@
     .contactTitle {
       text-align: left;
       position: relative;
-      margin: 0 0 20px;
       font-size: 37px;
       line-height: 0.95;
-      font-weight: 800;
-      text-transform: uppercase;
+      font-weight: 400;
       color: #1c164b;
+      margin-bottom: 40px;
 
       &::after {
         content: "";
@@ -1063,19 +1060,22 @@
       }
     }
 
-    .contactDescription {
-      text-align: left;
-      max-width: 780px;
-      font-size: 19px;
-      line-height: 1.45;
-      font-weight: 700;
-      color: #000;
-    }
+
+  }
+
+  .contactDescription {
+    margin: 30px auto;
+    font-size: 19px;
+    line-height: 1.45;
+    font-weight: 500;
+    color: #000;
+    max-width: 1280px;
   }
 
   .contactForm {
     background: #F7F8F9;
     padding: 26px 20px 22px;
+
 
     .formGrid {
       display: grid;
@@ -1282,22 +1282,11 @@
   }
 }
 
-@media (max-width: 1199px) {
-  .contactSection {
-    .contactHeader {
-      .contactTitle {
-        font-size: 60px;
-      }
-
-      .contactDescription {
-        font-size: 18px;
-      }
-    }
-  }
-}
-
 @media (max-width: 991px) {
   .contactSection {
+    padding-left: 24px;
+    padding-right: 24px;
+
     .contactForm {
       .formGrid {
         grid-template-columns: repeat(2, 1fr);
@@ -1314,7 +1303,7 @@
 
 @media (max-width: 767px) {
   .contactSection {
-    padding: 56px 0;
+    padding: 56px 24px;
 
     .contactHeader {
       .contactTag {
@@ -1322,7 +1311,7 @@
       }
 
       .contactTitle {
-        font-size: 42px;
+        font-size: 26px;
       }
 
       .contactDescription {

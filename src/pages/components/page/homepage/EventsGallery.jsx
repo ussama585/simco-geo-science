@@ -23,19 +23,26 @@ const events = [
     location: "Regina",
     date: "03/02/2023",
   },
+  {
+    id: 4,
+    image: eventImage1,
+    title: "Simcoe Geoscience Is Exhibiting at PDAC from March 5–8",
+    location: "Regina",
+    date: "03/02/2023",
+  },
 ];
 
 export default function EventsGallery() {
   return (
     <section className={styles.eventsSection}>
-      <div className={styles.eventsContainer}>
         <h2 className={styles.sectionTitle}>
-          <span>Events</span> (Gallery)
+          Events <span> (Gallery)</span>
         </h2>
 
+      <div className={styles.eventsContainer}>
         <div className="row">
           {events.map((event) => (
-            <div className="col-12 col-md-4 mb-4 mb-md-0" key={event.id}>
+            <div className="col-12 col-sm-6 col-md-3 mb-4 mb-md-0" key={event.id}>
               <div className={styles.eventCard}>
                 <div className={styles.imageWrapper}>
                   <img src={event.image.src} alt={event.title} className={styles.cardImage} />

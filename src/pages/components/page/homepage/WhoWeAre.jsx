@@ -8,7 +8,7 @@ export default function WhoWeAreSection() {
       <div className="row">
         <div className="col-12 col-lg-5 pe-2 pe-lg-0">
           <div className={styles.topLabel}>
-            <h2>Who We Are</h2>
+            <h2>Who <strong>We Are</strong></h2>
           </div>
           <div className={styles.contentArea}>
             <div className={styles.leftPanel}>
@@ -38,7 +38,7 @@ export default function WhoWeAreSection() {
             </div>
           </div>
           <div className={styles.bottomLabel}>
-            <h2>Our Services</h2>
+            <h2>Our <strong>Services</strong></h2>
           </div>
         </div>
         <div className="col-12 col-lg-7 ps-2 ps-lg-0 d-none d-lg-block position-relative">
