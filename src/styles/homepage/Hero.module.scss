@@ -717,6 +717,156 @@
 
 }
 
+// press section
+
+.pressReleaseSection {
+  padding: 32px 0 24px;
+  background: #f3f3f3;
+}
+
+.pressReleaseHeader {
+  margin-bottom: 26px;
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 23px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #1c164b;
+
+    span {
+      font-weight: 700;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 130px;
+      height: 3px;
+      background: #1c164b;
+    }
+  }
+}
+
+.pressReleaseList {
+  display: flex;
+  flex-direction: column;
+}
+
+.pressReleaseCard {
+  padding: 0 22px 22px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid rgba(28, 22, 75, 0.12);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.pressReleaseDate {
+  margin: 0 0 14px;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #000000;
+}
+
+.pressReleaseTitle {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #000000;
+}
+
+.pressReleaseAccent {
+  display: block;
+  width: 46px;
+  height: 9px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1c164b 0%, #31a7bb 100%);
+}
+
+.pressReleaseDescription {
+  margin: 0;
+  max-width: 96%;
+  font-size: 17px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #000000;
+}
+
+@media (max-width: 991.98px) {
+  .pressReleaseSection {
+    padding: 28px 0 20px;
+  }
+
+  .pressReleaseCard {
+    padding: 0 0 20px;
+    margin-bottom: 22px;
+  }
+
+  .pressReleaseDate {
+    font-size: 20px;
+  }
+
+  .pressReleaseTitle {
+    font-size: 17px;
+  }
+
+  .pressReleaseDescription {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pressReleaseHeader {
+    margin-bottom: 22px;
+
+    h2 {
+      font-size: 20px;
+
+      &::after {
+        width: 112px;
+        height: 2px;
+      }
+    }
+  }
+
+  .pressReleaseCard {
+    padding: 0 0 18px;
+    margin-bottom: 18px;
+  }
+
+  .pressReleaseDate {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+
+  .pressReleaseTitle {
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .pressReleaseAccent {
+    width: 44px;
+    height: 8px;
+    margin-bottom: 12px;
+  }
+
+  .pressReleaseDescription {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+}
+
 // events section
 
 .eventsSection {

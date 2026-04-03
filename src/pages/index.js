@@ -6,6 +6,7 @@ import ServicesHighlightSection from "./components/page/homepage/ServicesHighlig
 import AboutSection from "./components/page/homepage/AboutSection";
 import EventsGallery from "./components/page/homepage/EventsGallery";
 import FormSection from "./components/page/homepage/FormSection";
+import PressReleaseSection from "./components/page/homepage/PressSection";
 
 
 
@@ -26,6 +27,7 @@ export default function Home() {
       <WhoWeAreSection />
       <ServicesHighlightSection />
       <AboutSection />
+      <PressReleaseSection />
       <EventsGallery />
       <FormSection />
     </>
