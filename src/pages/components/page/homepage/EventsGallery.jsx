@@ -35,7 +35,7 @@ export default function EventsGallery() {
 
         <div className="row">
           {events.map((event) => (
-            <div className="col-12 col-md-4" key={event.id}>
+            <div className="col-12 col-md-4 mb-4 mb-md-0" key={event.id}>
               <div className={styles.eventCard}>
                 <div className={styles.imageWrapper}>
                   <img src={event.image.src} alt={event.title} className={styles.cardImage} />

@@ -25,6 +25,16 @@ const stats = [
     title: "Prediction Accuracy",
     value: "99%",
   },
+  {
+    id: 5,
+    title: "Sq. Kilometers Surveyed",
+    value: "2.3 Million+",
+  },
+  {
+    id: 6,
+    title: "Prediction Accuracy",
+    value: "99%",
+  },
 ];
 
 export default function AboutSection() {
@@ -32,24 +42,24 @@ export default function AboutSection() {
     <section className={styles.aboutSection}>
       <div className={styles.top}>
         <div className="row">
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-lg-6">
             <div className={styles.intro}>
               <h2 className={styles.eyebrow}>We are</h2>
 
               <h2 className={styles.title}>Simcoe Geoscience</h2>
 
-              <p className={styles.description}>
+              <p className={`mb-5 ${styles.description}`}>
                 With extensive field experience, advanced geophysical technologies,
                 and a highly skilled team, we deliver accurate, high-resolution
                 subsurface insights that drive confident exploration decisions.
               </p>
             </div>
           </div>
-          <div className={`col-12 col-md-6 ${styles.rightCol}`}>
+          <div className={`col-12 col-lg-6 d-none d-md-block ${styles.rightCol}`}>
             <div className={styles.stats}>
               {stats.map((item) => (
-                item.id < 3 &&
-                <div key={item.id} className={styles.statCard} style={item.id == 2 ? { marginTop: "15px" } : { marginTop: "0" }}>
+                item.id < 4 &&
+                <div key={item.id} className={styles.statCard} style={item.id == 2 ? { marginTop: "15px" } : item.id == 3 ? { marginTop: "30px" } : { marginTop: "0" }}>
                   <h3>{item.title}</h3>
                   <p>{item.value}</p>
                 </div>
@@ -57,8 +67,18 @@ export default function AboutSection() {
             </div>
             <div className={styles.stats}>
               {stats.map((item) => (
-                item.id > 2 &&
-                <div key={item.id} className={styles.statCard} style={item.id == 4 ? { marginTop: "15px" } : { marginTop: "0" }}>
+                item.id > 3 &&
+                <div key={item.id} className={styles.statCard} style={item.id == 5 ? { marginTop: "15px" } : item.id == 6 ? { marginTop: "30px" } : { marginTop: "0" }}>
+                  <h3>{item.title}</h3>
+                  <p>{item.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className={`col-12 col-md-6 d-block d-md-none ${styles.rightCol}`}>
+            <div className={styles.stats}>
+              {stats.map((item) => (
+                <div key={item.id} className={styles.statCard}>
                   <h3>{item.title}</h3>
                   <p>{item.value}</p>
                 </div>

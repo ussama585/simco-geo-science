@@ -6,7 +6,7 @@ export default function WhoWeAreSection() {
   return (
     <section className={styles.whoweare}>
       <div className="row">
-        <div className="col-12 col-md-5 pe-2 pe-md-0">
+        <div className="col-12 col-lg-5 pe-2 pe-lg-0">
           <div className={styles.topLabel}>
             <h2>Who We Are</h2>
           </div>
@@ -41,7 +41,7 @@ export default function WhoWeAreSection() {
             <h2>Our Services</h2>
           </div>
         </div>
-        <div className="col-12 col-md-7 ps-2 ps-md-0 d-none d-md-block">
+        <div className="col-12 col-lg-7 ps-2 ps-lg-0 d-none d-lg-block position-relative">
           <div className={styles.rightPanel}>
             <Image
               src={bgImage}

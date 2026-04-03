@@ -206,12 +206,21 @@
       object-fit: cover;
       position: absolute !important;
       height: 100%;
-      width: auto !important;
+      width: 140% !important;
       left: -110px !important;
       top: 0;
       right: 0;
       bottom: 0;
-      color: transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.425);
+      z-index: 1;
+      pointer-events: none;
+      left: -110px;
     }
   }
 
@@ -291,24 +300,28 @@
 
   .serviceCard {
     position: relative;
-    min-height: 580px;
-    height: 580px;
+    min-height: 650px;
+    height: 650px;
     overflow: hidden;
     width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.425);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &:hover .image {
+      transform: scale(1.08);
+      transition: transform 0.8s ease;
+    }
   }
 
   .image {
     object-fit: cover;
-  }
-
-  .overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0.45) 0%,
-        rgba(0, 0, 0, 0.15) 35%,
-        rgba(0, 0, 0, 0.45) 100%);
   }
 
   .content {
@@ -322,7 +335,6 @@
 
     h3 {
       margin: 0;
-      max-width: 320px;
       color: #ffffff;
       font-size: 27px;
       line-height: 1.35;
@@ -472,7 +484,16 @@
   .stats {
     padding-top: 2px;
     display: flex;
-    gap: 24px;
+    gap: 54px;
+
+    @media screen and (max-width:1180px) {
+      gap: 24px;
+    }
+
+    @media screen and (max-width:991px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   .rightCol {
@@ -504,6 +525,11 @@
 
       @media screen and (max-width:576px) {
         width: 135px;
+        height: 160px;
+      }
+
+      @media screen and (max-width:350px) {
+        width: 125px;
         height: 160px;
       }
 
@@ -584,7 +610,7 @@
       object-fit: cover;
       object-position: top;
       max-width: 100%;
-      max-height: 600px;
+      max-height: 700px;
 
       @media screen and (max-width:768px) {
         max-height: 400px;
@@ -609,9 +635,11 @@
         border-radius: 7px;
         margin-left: -55px;
         z-index: 2;
+        margin-bottom: 30px;
 
         @media screen and (max-width:768px) {
           margin-left: 0;
+          margin-bottom: 0;
         }
 
         p {
@@ -674,10 +702,6 @@
 
     .description {
       max-width: 100%;
-    }
-
-    .stats {
-      gap: 24px;
     }
 
     .imageWrap {
@@ -843,7 +867,7 @@
 
 .contactSection {
   padding: 80px 0;
-  background: #f5f5f5;
+  background: #ffffff;
 
   .contactContainer {
     width: 100%;
@@ -861,17 +885,29 @@
       font-size: 18px;
       line-height: 1.2;
       font-weight: 700;
-      color: #25a9c8;
+      color: #31a7bb;
       margin-bottom: 10px;
     }
 
     .contactTitle {
-      margin: 0 0 14px;
-      font-size: 72px;
+      position: relative;
+      margin: 0 0 20px;
+      font-size: 37px;
       line-height: 0.95;
       font-weight: 800;
       text-transform: uppercase;
-      color: #26197a;
+      color: #1c164b;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 104px;
+        height: 2px;
+        background: #1c164b;
+      }
     }
 
     .contactDescription {
@@ -880,12 +916,12 @@
       font-size: 19px;
       line-height: 1.45;
       font-weight: 700;
-      color: #111111;
+      color: #000;
     }
   }
 
   .contactForm {
-    background: #efefef;
+    background: #F7F8F9;
     padding: 26px 20px 22px;
 
     .formGrid {
@@ -915,7 +951,7 @@
           height: 42px;
           border: 1px solid transparent;
           border-radius: 10px;
-          background: #f8f8f8;
+          background: #ffffff;
           padding: 0 18px;
           font-size: 15px;
           color: #111111;
@@ -939,12 +975,12 @@
           height: 42px;
           border: 1px solid transparent;
           border-radius: 10px;
-          background: #f8f8f8;
+          background: #ffffff;
           overflow: hidden;
           transition: all 0.2s ease;
 
           &:focus-within {
-            border-color: #26197a;
+            border-color: #1c164b;
             background: #ffffff;
           }
 
@@ -963,7 +999,7 @@
           input {
             border: none;
             border-radius: 0;
-            background: transparent;
+            background: #ffffff;
             flex: 1;
             height: 100%;
             padding: 0 16px 0 4px;
@@ -1038,7 +1074,7 @@
         min-height: 110px;
         border: 1px solid transparent;
         border-radius: 10px;
-        background: #f8f8f8;
+        background: #ffffff;
         padding: 14px 16px;
         font-size: 15px;
         color: #111111;
@@ -1190,4 +1226,3 @@
 .inputError {
   border: 1px solid #d93025 !important;
 }
-

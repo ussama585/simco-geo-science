@@ -8,17 +8,20 @@ import card3 from "@/assets/images/homepage/card-3.webp";
 const services = [
   {
     id: 1,
-    title: "Environmental & Geotechnical Investigations",
+    title1: "Environmental & ",
+    title2: "Geotechnical Investigations",
     image: card1,
   },
   {
     id: 2,
-    title: "Exploration and Geological Studies",
+    title1: "Exploration and Geological ",
+    title2: "Studies",
     image: card2,
   },
   {
     id: 3,
-    title: "Consulting (Ground & Airborne)",
+    title1: "Consulting ",
+    title2: "(Ground & Airborne)",
     image: card3,
   },
 ];
@@ -32,7 +35,7 @@ export default function ServicesHighlightSection() {
             <div className={styles.serviceCard}>
               <Image
                 src={service.image}
-                alt={service.title}
+                alt={`${service.title1} ${service.title2}`}
                 fill
                 className={styles.image}
               />
@@ -40,7 +43,10 @@ export default function ServicesHighlightSection() {
               <div className={styles.overlay}></div>
 
               <div className={styles.content}>
-                <h3>{service.title}</h3>
+                <div>
+                  <h3>{service.title1}</h3>
+                  <h3>{service.title2}</h3>
+                </div>
 
                 <button className={styles.cta}>
                   <span className={styles.icon}>
