@@ -1040,6 +1040,7 @@
     }
 
     .contactTitle {
+      text-align: left;
       position: relative;
       margin: 0 0 20px;
       font-size: 37px;
@@ -1051,8 +1052,7 @@
       &::after {
         content: "";
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0%;
         bottom: -10px;
         width: 104px;
         height: 2px;
@@ -1061,8 +1061,8 @@
     }
 
     .contactDescription {
+      text-align: left;
       max-width: 780px;
-      margin: 0 auto;
       font-size: 19px;
       line-height: 1.45;
       font-weight: 700;

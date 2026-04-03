@@ -80,7 +80,7 @@ export default function FormSection() {
     <section className={styles.contactSection}>
       <div className={styles.contactContainer}>
         <div className={styles.contactHeader}>
-          <span className={styles.contactTag}>Contact us</span>
+          {/* <span className={styles.contactTag}>Contact us</span> */}
           <h2 className={styles.contactTitle}>GET IN TOUCH</h2>
           <p className={styles.contactDescription}>
             To learn more about capabilities and pricing for Simcoe’s Next
