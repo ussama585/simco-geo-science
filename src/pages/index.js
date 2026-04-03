@@ -27,6 +27,7 @@ export default function Home() {
       <WhoWeAreSection />
       <ServicesHighlightSection />
       <AboutSection />
+      
       <PressReleaseSection />
       <EventsGallery />
       <FormSection />
