@@ -30,7 +30,7 @@ const pressReleases = [
 export default function PressReleaseSection() {
   return (
     <section className={styles.pressReleaseSection}>
-      <div className="container">
+      <div className="">
         <div className={styles.pressReleaseHeader}>
           <h2>
             Press <span>Release</span>
