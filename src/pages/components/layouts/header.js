@@ -15,7 +15,23 @@ export default function Header() {
         </div>
 
         <nav className={styles.nav}>
-          <Link href="/">Company</Link>
+          <div className={styles.navItem}>
+            <button type="button" className={styles.navButton}>
+              Company <span>⌄</span>
+            </button>
+
+            <div className={styles.subMenu}>
+              <Link href="/about-us">About Simcoe</Link>
+              <Link href="/why-simcoe">Why Simcoe</Link>
+              <Link href="/management" className={styles.activeSubMenu}>
+                Management
+              </Link>
+              <Link href="/health-safety-environment">
+                Health, Safety and Environment
+              </Link>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+            </div>
+          </div>
           <Link href="/">Services</Link>
           <Link href="/">Technologies</Link>
           <Link href="/">Press Releases</Link>
