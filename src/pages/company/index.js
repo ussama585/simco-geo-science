@@ -1,19 +1,17 @@
-"use client";
-
 import { useState } from "react";
 
 import styles from "@/styles/company/Company.module.scss";
-import AboutSection from "../about-us";
-import HseSection from "../hse";
-import ManagementSection from "../management";
-import WhySimcoeSection from "../why-simcoe";
-import PrivacySection from "../privacy-policy";
+import AboutSection from "../components/page/company/AboutSection";
+import HseSection from "../components/page/company/HseSection";
+import ManagementSection from "../components/page/company/ManagementSection";
+import WhySimcoeSection from "../components/page/company/WhySimcoeSection";
+import PrivacySection from "../components/page/company/PrivacySection";
 
 const tabs = [
   { key: "about", label: "About Us" },
-  { key: "hse", label: "Health, Safety & Environment" },
-  { key: "management", label: "Management" },
   { key: "why", label: "Why Simcoe" },
+  { key: "management", label: "Management" },
+  { key: "hse", label: "Health, Safety & Environment" },
   { key: "privacy", label: "Privacy Policy" },
 ];
 

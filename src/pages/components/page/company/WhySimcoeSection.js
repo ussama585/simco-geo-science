@@ -32,7 +32,7 @@ const features = [
     large: true,
   },
   {
-    icon: proven  ,
+    icon: proven,
     title: "Proven Technologies",
     description:
       "High-performance computing and 3D subsurface mapping.",
